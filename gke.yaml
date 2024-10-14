@@ -18,7 +18,20 @@ spec:
             ports: 
               - containerPort: 80
             
-        
-      
+
+---
+apiVesion: v1
+kind: Service 
+metadata:
+  name: websiteservice
+spec: 
+  ports:
+    - protocol: TCP
+      targetPort: 5000
+      port: 80
+  selector:
+     type: website
+  type: loadBalancer
+
     
   
