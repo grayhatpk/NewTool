@@ -8,8 +8,7 @@ steps:
  - name: 'gcr.io/cloud-builders/gke-deploy'
    args: 
    - run 
-   - --filename=gke.yaml
-   - --image='gcr.io/$PROJECT_ID/websiteimage'
+   - --filename=gke.yaml 
    - --location=us-central1-c
    - --cluster=my-first-cluster-1
    - --namespace=gcp-devops-prod
