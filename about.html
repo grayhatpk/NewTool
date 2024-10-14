@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Cybersecurity Student</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Slideshow Section -->
+    <section id="slideshow">
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <h2 class="slide-heading">Internship at Positive Technology, Russia </h2>
+                <img src="pp.jpg" alt="Cybersecurity Conference">
+            </div>
+            < <div class="slide fade">
+                <h2 class="slide-heading">Runner up in CyberStorm Competition</h2>
+                <img src="storm.jpg" >
+            </div>
+            <!-- <div class="slide fade"> s
+                <h2 class="slide-heading">Hackathon Winner 2024</h2>
+                <img src="image3.jpg" >
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <div class="skill-content">
+                        <i class="fas fa-code"></i>
+                        <h3>Penetration Testing</h3>
+                        <p>Experienced in identifying vulnerabilities and simulating attacks to test system security.</p>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-content">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Network Security</h3>
+                        <p>Skilled in securing networks from unauthorized access, attacks, and threats.</p>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-content">
+                        <i class="fas fa-lock"></i>
+                        <h3>Cryptography</h3>
+                        <p>Proficient in data encryption, cryptographic algorithms, and secure communication protocols.</p>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-content">
+                        <i class="fas fa-user-secret"></i>
+                        <h3>Ethical Hacking</h3>
+                        <p>Certified Ethical Hacker with a focus on discovering vulnerabilities and implementing solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <h3>Network Security Tool</h3>
+                    <p>A tool that identifies and reports network vulnerabilities in real-time.</p>
+                    <a href="https://github.com/yourusername/network-security-tool" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project">
+                    <h3>Malware Analysis Platform</h3>
+                    <p>A platform that allows security professionals to analyze malware behavior in a sandboxed environment.</p>
+                    <a href="https://github.com/yourusername/malware-analysis-platform" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project">
+                    <h3>Penetration Testing Automation</h3>
+                    <p>An automation framework that streamlines the process of penetration testing for networks and applications.</p>
+                    <a href="https://github.com/yourusername/penetration-testing-automation" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Hobbies/Interests Section -->
+    <section id="hobbies">
+        <div class="container">
+            <h2>Hobbies & Interests</h2>
+            <div class="hobbies-container">
+                <div class="hobby">
+                    <i class="fas fa-book"></i>
+                    <h3>Reading</h3>
+                    <p>I enjoy reading cybersecurity books and blogs to stay informed about the latest trends and tools in the field.</p>
+                </div>
+                <div class="hobby">
+                    <i class="fas fa-code"></i>
+                    <h3>Coding</h3>
+                    <p>I love building tools and automating security tasks to improve workflow efficiency.</p>
+                </div>
+                <div class="hobby">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Gaming</h3>
+                    <p>In my free time, I enjoy gaming as a way to relax and engage with friends.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Name | Cybersecurity Student</p>
+    </footer>
+
+    <!-- Slideshow JavaScript -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";  
+            setTimeout(showSlides, 5000); // Change image every 3 seconds
+        }
+    </script>
+</body>
+</html>
