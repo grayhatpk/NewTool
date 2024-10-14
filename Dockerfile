@@ -1,14 +1,14 @@
-# Use the official Nginx image as a base
-FROM nginx:alpine
+# Use the official Apache image from Docker Hub
+FROM httpd:alpine
 
-# Set the directory for the web files
-WORKDIR /usr/share/nginx/html
+# Set the working directory to the Apache web root
+WORKDIR /usr/local/apache2/htdocs/
 
-# Copy the content of your website to the Nginx web root directory
-COPY . /usr/share/nginx/html
+# Copy the content of your website to the Apache web root directory
+COPY . /usr/local/apache2/htdocs/
 
 # Expose port 80 to the outside world
 EXPOSE 80
 
-# Start Nginx server
-CMD ["nginx", "-g", "daemon off;"]
+# Start Apache in the foreground
+CMD ["httpd-foreground"]
