@@ -16,11 +16,11 @@ spec:
           - image: 'gcr.io/vocal-etching-429115-m3/websiteimage'
             name: websiteimage
             ports: 
-              - containerPort: 80
-            
+              - containerPort: 80  # Ensure the container port matches the service's target port
 
 ---
-apiVesion: v1
+
+apiVersion: v1 
 kind: Service 
 metadata:
   name: websiteservice
@@ -28,11 +28,8 @@ metadata:
 spec: 
   ports:
     - protocol: TCP
-      targetPort: 5000
+      targetPort: 80  
       port: 80
   selector:
      type: website
   type: LoadBalancer
-
-    
-  
