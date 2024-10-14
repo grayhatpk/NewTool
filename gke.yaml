@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata: 
+  name: websitedeployment 
+spec:
+  replicas: 1
+  selector: 
+    matchLabels:
+        type: website 
+  template: 
+    metadata:
+        labels: 
+          type: website
+    spec: 
+        containers: 
+          - image: 'gcr.io/vocal-etching-429115-m3/websiteimage'
+            name: websiteimage
+            ports: 
+              - containerPort: 80
